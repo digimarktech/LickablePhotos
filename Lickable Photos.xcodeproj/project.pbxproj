@@ -83,10 +83,7 @@
 				BD29983A2183B1E4003312EF /* View */,
 				BD29983B2183B1EB003312EF /* Controller */,
 				BD2998192183AE79003312EF /* AppDelegate.swift */,
-				BD29981B2183AE79003312EF /* ViewController.swift */,
-				BD29981D2183AE79003312EF /* Main.storyboard */,
 				BD2998202183AE7B003312EF /* Assets.xcassets */,
-				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
 				BD2998252183AE7B003312EF /* Info.plist */,
 			);
 			path = "Lickable Photos";
@@ -112,6 +109,8 @@
 		BD29983A2183B1E4003312EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
+				BD29981D2183AE79003312EF /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +118,7 @@
 		BD29983B2183B1EB003312EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BD29981B2183AE79003312EF /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
