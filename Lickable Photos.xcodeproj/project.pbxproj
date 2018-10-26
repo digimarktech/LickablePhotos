@@ -13,6 +13,7 @@
 		BD2998212183AE7B003312EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2998202183AE7B003312EF /* Assets.xcassets */; };
 		BD2998242183AE7B003312EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2998222183AE7B003312EF /* LaunchScreen.storyboard */; };
 		BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */; };
+		BD29983D2183B3F8003312EF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983C2183B3F8003312EF /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BD29982A2183AE7C003312EF /* Lickable PhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lickable PhotosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lickable_PhotosTests.swift; sourceTree = "<group>"; };
 		BD2998302183AE7C003312EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD29983C2183B3F8003312EF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,9 @@
 		BD2998182183AE79003312EF /* Lickable Photos */ = {
 			isa = PBXGroup;
 			children = (
+				BD2998392183B1D7003312EF /* Model */,
+				BD29983A2183B1E4003312EF /* View */,
+				BD29983B2183B1EB003312EF /* Controller */,
 				BD2998192183AE79003312EF /* AppDelegate.swift */,
 				BD29981B2183AE79003312EF /* ViewController.swift */,
 				BD29981D2183AE79003312EF /* Main.storyboard */,
@@ -94,6 +99,28 @@
 				BD2998302183AE7C003312EF /* Info.plist */,
 			);
 			path = "Lickable PhotosTests";
+			sourceTree = "<group>";
+		};
+		BD2998392183B1D7003312EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD29983C2183B3F8003312EF /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD29983A2183B1E4003312EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD29983B2183B1EB003312EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD29983D2183B3F8003312EF /* Photo.swift in Sources */,
 				BD29981C2183AE79003312EF /* ViewController.swift in Sources */,
 				BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */,
 			);
