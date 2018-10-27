@@ -71,11 +71,39 @@
                     <navigationItem key="navigationItem" id="6RH-hl-eyg"/>
                     <connections>
                         <outlet property="collectionView" destination="coQ-w5-sGw" id="jEg-bw-21G"/>
+                        <segue destination="nwj-CE-I2w" kind="show" identifier="showPhotoDetail" id="KKb-SB-z5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="110.19490254872565"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BS1-iS-m5l">
+            <objects>
+                <viewController id="nwj-CE-I2w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QUv-Ij-DTl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-9H-BBR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WUg-9H-BBR" firstAttribute="bottom" secondItem="0dO-4Z-dZq" secondAttribute="bottom" id="FDG-Nh-ZPa"/>
+                            <constraint firstItem="WUg-9H-BBR" firstAttribute="leading" secondItem="0dO-4Z-dZq" secondAttribute="leading" id="G3H-jo-eO4"/>
+                            <constraint firstItem="WUg-9H-BBR" firstAttribute="top" secondItem="0dO-4Z-dZq" secondAttribute="top" id="I9b-Y7-F4V"/>
+                            <constraint firstItem="WUg-9H-BBR" firstAttribute="trailing" secondItem="0dO-4Z-dZq" secondAttribute="trailing" id="e6a-Bp-hWV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0dO-4Z-dZq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZh-pX-gvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="105.69715142428787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jXb-kR-h3Y">
