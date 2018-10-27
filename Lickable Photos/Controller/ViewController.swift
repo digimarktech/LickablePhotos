@@ -12,7 +12,28 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+		guard let url = URL(string: "http://jsonplaceholder.typicode.com/photos/") else { return }
+		let request = URLRequest(url: url)
+		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+			
+			if error != nil {
+				print(error?.localizedDescription ?? "")
+			}
+			guard let data = data else { return }
+			let decoder = JSONDecoder()
+			
+			do {
+				let photos = try decoder.decode([Photo].self, from: data)
+				photos.forEach({ photo in
+					print(photo.thumbnailURL)
+				})
+			} catch {
+				print(error.localizedDescription)
+			}
+			
+		}
+		task.resume()
 	}
 
 
