@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8583649A90EAB93FD09E6E9E /* Pods_Lickable_Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D9F239D8829413477D88E7 /* Pods_Lickable_Photos.framework */; };
 		BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998192183AE79003312EF /* AppDelegate.swift */; };
 		BD29981C2183AE79003312EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29981B2183AE79003312EF /* ViewController.swift */; };
 		BD29981F2183AE79003312EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD29981D2183AE79003312EF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */; };
 		BD29983D2183B3F8003312EF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983C2183B3F8003312EF /* Photo.swift */; };
 		BD29983F2183E564003312EF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983E2183E564003312EF /* PhotoCell.swift */; };
+		D0CDB77126942D25EC239851 /* Pods_Lickable_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11A64709E30A182D9C47327E /* Pods-Lickable PhotosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable PhotosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable PhotosTests/Pods-Lickable PhotosTests.release.xcconfig"; sourceTree = "<group>"; };
+		43D9F239D8829413477D88E7 /* Pods_Lickable_Photos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lickable_Photos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892541E6C6D638906A33F389 /* Pods-Lickable PhotosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable PhotosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable PhotosTests/Pods-Lickable PhotosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD2998162183AE79003312EF /* Lickable Photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lickable Photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2998192183AE79003312EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD29981B2183AE79003312EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +45,9 @@
 		BD2998302183AE7C003312EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD29983C2183B3F8003312EF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD29983E2183E564003312EF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.debug.xcconfig"; sourceTree = "<group>"; };
+		C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lickable_PhotosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0671207A4A235557AEC3E36 /* Pods-Lickable Photos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8583649A90EAB93FD09E6E9E /* Pods_Lickable_Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CDB77126942D25EC239851 /* Pods_Lickable_PhotosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1508500EFD4ABB0D8F11C983 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */,
+				F0671207A4A235557AEC3E36 /* Pods-Lickable Photos.release.xcconfig */,
+				892541E6C6D638906A33F389 /* Pods-Lickable PhotosTests.debug.xcconfig */,
+				11A64709E30A182D9C47327E /* Pods-Lickable PhotosTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A71CF31C927697A32AA0BE83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D9F239D8829413477D88E7 /* Pods_Lickable_Photos.framework */,
+				C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD29980D2183AE79003312EF = {
 			isa = PBXGroup;
 			children = (
 				BD2998182183AE79003312EF /* Lickable Photos */,
 				BD29982D2183AE7C003312EF /* Lickable PhotosTests */,
 				BD2998172183AE79003312EF /* Products */,
+				1508500EFD4ABB0D8F11C983 /* Pods */,
+				A71CF31C927697A32AA0BE83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD2998332183AE7C003312EF /* Build configuration list for PBXNativeTarget "Lickable Photos" */;
 			buildPhases = (
+				474937B17CBE15B9869CB17E /* [CP] Check Pods Manifest.lock */,
 				BD2998122183AE79003312EF /* Sources */,
 				BD2998132183AE79003312EF /* Frameworks */,
 				BD2998142183AE79003312EF /* Resources */,
+				3E2F72569F7E97DD4DC54CB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD2998362183AE7C003312EF /* Build configuration list for PBXNativeTarget "Lickable PhotosTests" */;
 			buildPhases = (
+				B289FEC4294136AFB9BB24D0 /* [CP] Check Pods Manifest.lock */,
 				BD2998262183AE7C003312EF /* Sources */,
 				BD2998272183AE7C003312EF /* Frameworks */,
 				BD2998282183AE7C003312EF /* Resources */,
@@ -221,6 +256,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E2F72569F7E97DD4DC54CB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		474937B17CBE15B9869CB17E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lickable Photos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B289FEC4294136AFB9BB24D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lickable PhotosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD2998122183AE79003312EF /* Sources */ = {
@@ -390,6 +494,7 @@
 		};
 		BD2998342183AE7C003312EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +513,7 @@
 		};
 		BD2998352183AE7C003312EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0671207A4A235557AEC3E36 /* Pods-Lickable Photos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +532,7 @@
 		};
 		BD2998372183AE7C003312EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892541E6C6D638906A33F389 /* Pods-Lickable PhotosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -447,6 +554,7 @@
 		};
 		BD2998382183AE7C003312EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11A64709E30A182D9C47327E /* Pods-Lickable PhotosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
