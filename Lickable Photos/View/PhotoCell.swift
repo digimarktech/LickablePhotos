@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoCell: UICollectionViewCell {
     
 	@IBOutlet weak var imageView: UIImageView!
 	
 	func configureCell(for photo: Photo) {
-		
+		imageView.sd_setImage(with: photo.thumbnailURL, placeholderImage: nil, options: .highPriority, completed: nil)
 	}
 }

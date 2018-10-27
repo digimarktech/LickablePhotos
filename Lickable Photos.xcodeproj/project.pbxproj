@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8583649A90EAB93FD09E6E9E /* Pods_Lickable_Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D9F239D8829413477D88E7 /* Pods_Lickable_Photos.framework */; };
 		BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998192183AE79003312EF /* AppDelegate.swift */; };
-		BD29981C2183AE79003312EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29981B2183AE79003312EF /* ViewController.swift */; };
+		BD29981C2183AE79003312EF /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29981B2183AE79003312EF /* PhotoVC.swift */; };
 		BD29981F2183AE79003312EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD29981D2183AE79003312EF /* Main.storyboard */; };
 		BD2998212183AE7B003312EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2998202183AE7B003312EF /* Assets.xcassets */; };
 		BD2998242183AE7B003312EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2998222183AE7B003312EF /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		892541E6C6D638906A33F389 /* Pods-Lickable PhotosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable PhotosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable PhotosTests/Pods-Lickable PhotosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD2998162183AE79003312EF /* Lickable Photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lickable Photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2998192183AE79003312EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD29981B2183AE79003312EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD29981B2183AE79003312EF /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
 		BD29981E2183AE79003312EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD2998202183AE7B003312EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2998232183AE7B003312EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		BD29983B2183B1EB003312EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BD29981B2183AE79003312EF /* ViewController.swift */,
+				BD29981B2183AE79003312EF /* PhotoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 			files = (
 				BD29983F2183E564003312EF /* PhotoCell.swift in Sources */,
 				BD29983D2183B3F8003312EF /* Photo.swift in Sources */,
-				BD29981C2183AE79003312EF /* ViewController.swift in Sources */,
+				BD29981C2183AE79003312EF /* PhotoVC.swift in Sources */,
 				BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
