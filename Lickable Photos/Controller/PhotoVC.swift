@@ -7,52 +7,39 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PhotoVC: UIViewController {
 	
+	//Outlets
+	@IBOutlet weak private var collectionView: UICollectionView!
+	
+	//Properties
 	var photos = [Photo]()
-	@IBOutlet weak var collectionView: UICollectionView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		collectionView.delegate = self
 		collectionView.dataSource = self
 		
-		downloadPhotos()
-	}
-	
-	func downloadPhotos() {
-		
-		guard let url = URL(string: "http://jsonplaceholder.typicode.com/photos/") else { return }
-		let request = URLRequest(url: url)
-		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-			
-			if error != nil {
-				print(error?.localizedDescription ?? "")
-			}
-			guard let data = data else { return }
-			let decoder = JSONDecoder()
-			
-			do {
-				self.photos = try decoder.decode([Photo].self, from: data)
+		let apiRequestLoader = APIRequestLoader(apiRequest: PhotoRequest())
+		apiRequestLoader.loadAPIRequest { photos, error in
+			if let photos = photos {
+				self.photos = photos
 				DispatchQueue.main.async {
 					self.collectionView.reloadData()
 				}
-				
-			} catch {
-				print(error.localizedDescription)
 			}
-			
 		}
-		task.resume()
 	}
-}
-
-extension PhotoVC: UICollectionViewDelegateFlowLayout {
 	
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		print("Selected cell at: \(indexPath.row)")
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showPhotoDetail" {
+			guard let destinationVC = segue.destination as? PhotoDetailVC else { return }
+			let path = collectionView.indexPathsForSelectedItems?.first
+			let photo = photos[(path?.row)!]
+			destinationVC.photo = photo
+		}
 	}
 }
 

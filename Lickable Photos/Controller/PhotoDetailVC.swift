@@ -8,12 +8,20 @@
 
 import UIKit
 
-class PhotoDetailVC: UIViewController {
-
+final class PhotoDetailVC: UIViewController {
+	
+	internal var photo: Photo?
+	@IBOutlet weak private var imageView: UIImageView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		guard let photo = self.photo else { return }
+		imageView.sd_setImage(with: photo.thumbnailURL, placeholderImage: nil, options: .highPriority)
+	}
 
 }

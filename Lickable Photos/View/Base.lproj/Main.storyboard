@@ -24,21 +24,21 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="vp8-Mo-Tzw">
-                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="5" maxX="10" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="nfm-F2-xfg" customClass="PhotoCell" customModule="Lickable_Photos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <rect key="frame" x="10" y="5" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qgN-uN-a58">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -50,6 +50,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="qgN-uN-a58" id="522-KC-f6F"/>
+                                            <segue destination="nwj-CE-I2w" kind="show" identifier="showPhotoDetail" id="8Nx-5Q-HRi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -60,7 +61,7 @@
                             <constraint firstItem="coQ-w5-sGw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6yw-83-s4B"/>
                             <constraint firstItem="coQ-w5-sGw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MZ1-Gc-Mou"/>
                             <constraint firstItem="C2f-OU-Cjn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S5N-oW-YAZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C2f-OU-Cjn" secondAttribute="bottom" id="ZKr-KX-t9t"/>
+                            <constraint firstAttribute="bottom" secondItem="C2f-OU-Cjn" secondAttribute="bottom" id="ZKr-KX-t9t"/>
                             <constraint firstItem="coQ-w5-sGw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ezn-VY-1MF"/>
                             <constraint firstItem="C2f-OU-Cjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lTf-Yi-J6W"/>
                             <constraint firstItem="coQ-w5-sGw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uy5-sF-99T"/>
@@ -71,22 +72,21 @@
                     <navigationItem key="navigationItem" id="6RH-hl-eyg"/>
                     <connections>
                         <outlet property="collectionView" destination="coQ-w5-sGw" id="jEg-bw-21G"/>
-                        <segue destination="nwj-CE-I2w" kind="show" identifier="showPhotoDetail" id="KKb-SB-z5K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="110.19490254872565"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo DetailVC-->
         <scene sceneID="BS1-iS-m5l">
             <objects>
-                <viewController id="nwj-CE-I2w" sceneMemberID="viewController">
+                <viewController id="nwj-CE-I2w" customClass="PhotoDetailVC" customModule="Lickable_Photos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QUv-Ij-DTl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-9H-BBR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-9H-BBR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                         </subviews>
@@ -100,6 +100,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0dO-4Z-dZq"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="WUg-9H-BBR" id="M29-kT-RIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZh-pX-gvO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
