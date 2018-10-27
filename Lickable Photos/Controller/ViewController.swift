@@ -13,6 +13,11 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		downloadPhotos()
+	}
+	
+	func downloadPhotos() {
+		
 		guard let url = URL(string: "http://jsonplaceholder.typicode.com/photos/") else { return }
 		let request = URLRequest(url: url)
 		let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -35,7 +40,5 @@ class ViewController: UIViewController {
 		}
 		task.resume()
 	}
-
-
 }
 

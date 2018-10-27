@@ -14,6 +14,7 @@
 		BD2998242183AE7B003312EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2998222183AE7B003312EF /* LaunchScreen.storyboard */; };
 		BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */; };
 		BD29983D2183B3F8003312EF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983C2183B3F8003312EF /* Photo.swift */; };
+		BD29983F2183E564003312EF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983E2183E564003312EF /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lickable_PhotosTests.swift; sourceTree = "<group>"; };
 		BD2998302183AE7C003312EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD29983C2183B3F8003312EF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BD29983E2183E564003312EF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
 				BD29981D2183AE79003312EF /* Main.storyboard */,
+				BD29983E2183E564003312EF /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD29983F2183E564003312EF /* PhotoCell.swift in Sources */,
 				BD29983D2183B3F8003312EF /* Photo.swift in Sources */,
 				BD29981C2183AE79003312EF /* ViewController.swift in Sources */,
 				BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */,
