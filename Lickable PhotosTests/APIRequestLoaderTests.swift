@@ -39,7 +39,7 @@ class APIRequestLoaderTests: XCTestCase {
 			XCTAssertEqual(photos?.first?.albumId, 1)
 			expectation.fulfill()
 		}
-		wait(for: [expectation], timeout: 1)
+		wait(for: [expectation], timeout: 5)
 	}
 
 }
