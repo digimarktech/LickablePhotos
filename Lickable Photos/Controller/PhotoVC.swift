@@ -30,8 +30,9 @@ final class PhotoVC: UIViewController {
 		collectionView.dataSource = dataSource
 		
 		let apiRequestLoader = APIRequestLoader(apiRequest: PhotoRequest())
-		apiRequestLoader.loadAPIRequest { photos, error in
+		apiRequestLoader.loadAPIRequest { [weak self] photos, error in
 			if let photos = photos {
+				guard let self = self else { return }
 				self.dataSource.photos = photos
 				DispatchQueue.main.async {
 					self.collectionView.reloadData()

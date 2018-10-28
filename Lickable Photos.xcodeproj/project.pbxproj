@@ -13,7 +13,6 @@
 		BD29981F2183AE79003312EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD29981D2183AE79003312EF /* Main.storyboard */; };
 		BD2998212183AE7B003312EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2998202183AE7B003312EF /* Assets.xcassets */; };
 		BD2998242183AE7B003312EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2998222183AE7B003312EF /* LaunchScreen.storyboard */; };
-		BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */; };
 		BD29983D2183B3F8003312EF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983C2183B3F8003312EF /* Photo.swift */; };
 		BD29983F2183E564003312EF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29983E2183E564003312EF /* PhotoCell.swift */; };
 		BD29984121840E8C003312EF /* PhotoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984021840E8C003312EF /* PhotoDetailVC.swift */; };
@@ -50,7 +49,6 @@
 		BD2998232183AE7B003312EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2998252183AE7B003312EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD29982A2183AE7C003312EF /* Lickable PhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lickable PhotosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lickable_PhotosTests.swift; sourceTree = "<group>"; };
 		BD2998302183AE7C003312EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD29983C2183B3F8003312EF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD29983E2183E564003312EF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -147,9 +145,8 @@
 		BD29982D2183AE7C003312EF /* Lickable PhotosTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD29984A21850155003312EF /* MockURLProtocol.swift */,
-				BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */,
 				BD2998302183AE7C003312EF /* Info.plist */,
+				BD29984A21850155003312EF /* MockURLProtocol.swift */,
 				BD2998462184C001003312EF /* PhotoRequestTests.swift */,
 				BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */,
 				BD29987B218557B0003312EF /* PhotoVCTests.swift */,
@@ -376,7 +373,6 @@
 			files = (
 				BD29984C21850371003312EF /* MockURLProtocol.swift in Sources */,
 				BD2998472184C001003312EF /* PhotoRequestTests.swift in Sources */,
-				BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */,
 				BD29984E218505D3003312EF /* APIRequestLoaderTests.swift in Sources */,
 				BD29987C218557B0003312EF /* PhotoVCTests.swift in Sources */,
 			);
