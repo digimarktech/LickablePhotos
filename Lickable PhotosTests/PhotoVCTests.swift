@@ -10,20 +10,26 @@ import XCTest
 @testable import Lickable_Photos
 
 class PhotoVCTests: XCTestCase {
+	
+	var photoVC: PhotoVC!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+		
+		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+		photoVC = storyboard.instantiateViewController(withIdentifier: "PhotoVC") as? PhotoVC
+		
+		//call view did load from the PhotoVC
+		_ = photoVC.view
     }
 
 	func testInitCollectionView() {
 		
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		let photoVC = storyboard.instantiateViewController(withIdentifier: "PhotoVC") as! PhotoVC
-		
-		//call view did load from the PhotoVC
-		_ = photoVC.view
-		
 		XCTAssertNotNil(photoVC.collectionView)
+	}
+	
+	func testLoadViewSetsCollectionViewDataSource() {
+		
+		XCTAssertTrue(photoVC.collectionView.dataSource is PhotoVCDataSource)
 	}
 
 }
