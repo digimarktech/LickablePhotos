@@ -36,7 +36,13 @@ class APIRequestLoaderTests: XCTestCase {
 		
 		let expectation = XCTestExpectation(description: "response")
 		loader.loadAPIRequest { photos, error in
+			
 			XCTAssertEqual(photos?.first?.albumId, 1)
+			XCTAssertEqual(photos?.first?.id, 1)
+			XCTAssertEqual(photos?.first?.title, "Some test title")
+			XCTAssertEqual(photos?.first?.url, URL(string: "https://via.placeholder.com/600/92c952"))
+			XCTAssertEqual(photos?.first?.thumbnailURL, URL(string: "https://via.placeholder.com/150/92c952"))
+			
 			expectation.fulfill()
 		}
 		wait(for: [expectation], timeout: 5)
