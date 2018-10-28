@@ -12,7 +12,7 @@ import SDWebImage
 final class PhotoVC: UIViewController {
 	
 	//Outlets
-	@IBOutlet weak private var collectionView: UICollectionView!
+	@IBOutlet weak var collectionView: UICollectionView!
 	
 	//Data Properties
 	private var photos = [Photo]()
