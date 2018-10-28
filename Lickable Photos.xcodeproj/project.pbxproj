@@ -21,7 +21,6 @@
 		BD2998492184CCA2003312EF /* APIRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998482184CCA2003312EF /* APIRequestLoader.swift */; };
 		BD29984C21850371003312EF /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984A21850155003312EF /* MockURLProtocol.swift */; };
 		BD29984E218505D3003312EF /* APIRequestLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */; };
-		BD29985021852314003312EF /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984F21852314003312EF /* CustomFlowLayout.swift */; };
 		BD29987C218557B0003312EF /* PhotoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29987B218557B0003312EF /* PhotoVCTests.swift */; };
 		BD29987E21856D31003312EF /* PhotoVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29987D21856D31003312EF /* PhotoVCDataSource.swift */; };
 		D0CDB77126942D25EC239851 /* Pods_Lickable_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */; };
@@ -58,7 +57,6 @@
 		BD2998482184CCA2003312EF /* APIRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoader.swift; sourceTree = "<group>"; };
 		BD29984A21850155003312EF /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoaderTests.swift; sourceTree = "<group>"; };
-		BD29984F21852314003312EF /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		BD29987B218557B0003312EF /* PhotoVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVCTests.swift; sourceTree = "<group>"; };
 		BD29987D21856D31003312EF /* PhotoVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVCDataSource.swift; sourceTree = "<group>"; };
 		C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,15 +127,13 @@
 		BD2998182183AE79003312EF /* Lickable Photos */ = {
 			isa = PBXGroup;
 			children = (
-				BD2998392183B1D7003312EF /* Model */,
-				BD29983A2183B1E4003312EF /* View */,
-				BD29983B2183B1EB003312EF /* Controller */,
 				BD2998192183AE79003312EF /* AppDelegate.swift */,
 				BD2998202183AE7B003312EF /* Assets.xcassets */,
 				BD2998252183AE7B003312EF /* Info.plist */,
-				BD2998442184BC14003312EF /* PhotoRequest.swift */,
-				BD2998482184CCA2003312EF /* APIRequestLoader.swift */,
-				BD29987D21856D31003312EF /* PhotoVCDataSource.swift */,
+				BD2998392183B1D7003312EF /* Models */,
+				BD29983A2183B1E4003312EF /* Views */,
+				BD29983B2183B1EB003312EF /* Controllers */,
+				BD29987F21863F2B003312EF /* Network */,
 			);
 			path = "Lickable Photos";
 			sourceTree = "<group>";
@@ -154,32 +150,49 @@
 			path = "Lickable PhotosTests";
 			sourceTree = "<group>";
 		};
-		BD2998392183B1D7003312EF /* Model */ = {
+		BD2998392183B1D7003312EF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BD29983C2183B3F8003312EF /* Photo.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		BD29983A2183B1E4003312EF /* View */ = {
+		BD29983A2183B1E4003312EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
 				BD29981D2183AE79003312EF /* Main.storyboard */,
 				BD29983E2183E564003312EF /* PhotoCell.swift */,
-				BD29984F21852314003312EF /* CustomFlowLayout.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		BD29983B2183B1EB003312EF /* Controller */ = {
+		BD29983B2183B1EB003312EF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BD29981B2183AE79003312EF /* PhotoVC.swift */,
+				BD29987D21856D31003312EF /* PhotoVCDataSource.swift */,
 				BD29984021840E8C003312EF /* PhotoDetailVC.swift */,
 			);
-			path = Controller;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BD29987F21863F2B003312EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD2998482184CCA2003312EF /* APIRequestLoader.swift */,
+				BD29988021863F46003312EF /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BD29988021863F46003312EF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				BD2998442184BC14003312EF /* PhotoRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +370,6 @@
 			files = (
 				BD29983F2183E564003312EF /* PhotoCell.swift in Sources */,
 				BD29983D2183B3F8003312EF /* Photo.swift in Sources */,
-				BD29985021852314003312EF /* CustomFlowLayout.swift in Sources */,
 				BD29984121840E8C003312EF /* PhotoDetailVC.swift in Sources */,
 				BD29981C2183AE79003312EF /* PhotoVC.swift in Sources */,
 				BD2998452184BC14003312EF /* PhotoRequest.swift in Sources */,
