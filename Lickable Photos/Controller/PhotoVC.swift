@@ -50,6 +50,7 @@ final class PhotoVC: UIViewController {
 	}
 	
 	@IBAction func topButtonPressed(_ sender: UIBarButtonItem) {
+		collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
 	}
 	
 }
