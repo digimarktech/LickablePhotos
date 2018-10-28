@@ -20,6 +20,9 @@
 		BD2998452184BC14003312EF /* PhotoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998442184BC14003312EF /* PhotoRequest.swift */; };
 		BD2998472184C001003312EF /* PhotoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998462184C001003312EF /* PhotoRequestTests.swift */; };
 		BD2998492184CCA2003312EF /* APIRequestLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2998482184CCA2003312EF /* APIRequestLoader.swift */; };
+		BD29984C21850371003312EF /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984A21850155003312EF /* MockURLProtocol.swift */; };
+		BD29984E218505D3003312EF /* APIRequestLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */; };
+		BD29985021852314003312EF /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984F21852314003312EF /* CustomFlowLayout.swift */; };
 		D0CDB77126942D25EC239851 /* Pods_Lickable_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		BD2998442184BC14003312EF /* PhotoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRequest.swift; sourceTree = "<group>"; };
 		BD2998462184C001003312EF /* PhotoRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRequestTests.swift; sourceTree = "<group>"; };
 		BD2998482184CCA2003312EF /* APIRequestLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoader.swift; sourceTree = "<group>"; };
+		BD29984A21850155003312EF /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoaderTests.swift; sourceTree = "<group>"; };
+		BD29984F21852314003312EF /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.debug.xcconfig"; sourceTree = "<group>"; };
 		C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lickable_PhotosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0671207A4A235557AEC3E36 /* Pods-Lickable Photos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,9 +142,11 @@
 		BD29982D2183AE7C003312EF /* Lickable PhotosTests */ = {
 			isa = PBXGroup;
 			children = (
+				BD29984A21850155003312EF /* MockURLProtocol.swift */,
 				BD29982E2183AE7C003312EF /* Lickable_PhotosTests.swift */,
 				BD2998302183AE7C003312EF /* Info.plist */,
 				BD2998462184C001003312EF /* PhotoRequestTests.swift */,
+				BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */,
 			);
 			path = "Lickable PhotosTests";
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
 				BD29981D2183AE79003312EF /* Main.storyboard */,
 				BD29983E2183E564003312EF /* PhotoCell.swift */,
+				BD29984F21852314003312EF /* CustomFlowLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 			files = (
 				BD29983F2183E564003312EF /* PhotoCell.swift in Sources */,
 				BD29983D2183B3F8003312EF /* Photo.swift in Sources */,
+				BD29985021852314003312EF /* CustomFlowLayout.swift in Sources */,
 				BD29984121840E8C003312EF /* PhotoDetailVC.swift in Sources */,
 				BD29981C2183AE79003312EF /* PhotoVC.swift in Sources */,
 				BD2998452184BC14003312EF /* PhotoRequest.swift in Sources */,
@@ -357,8 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD29984C21850371003312EF /* MockURLProtocol.swift in Sources */,
 				BD2998472184C001003312EF /* PhotoRequestTests.swift in Sources */,
 				BD29982F2183AE7C003312EF /* Lickable_PhotosTests.swift in Sources */,
+				BD29984E218505D3003312EF /* APIRequestLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

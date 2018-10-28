@@ -10,7 +10,11 @@ import UIKit
 import SDWebImage
 
 class PhotoCell: UICollectionViewCell {
-    
+	
+	override func awakeFromNib() {
+		self.layer.cornerRadius = 5
+	}
+	
 	@IBOutlet weak var imageView: UIImageView!
 	
 	func configureCell(for photo: Photo) {
