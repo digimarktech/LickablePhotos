@@ -56,6 +56,19 @@ final class PhotoVC: UIViewController {
 	
 }
 
+//MARK: UICollectionViewDelegate
+extension PhotoVC: UICollectionViewDelegate {
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
+		let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+		let photoDetailVC = storyBoard.instantiateViewController(withIdentifier: "PhotoDetailVC") as! PhotoDetailVC
+		let photo = self.dataSource.photos[indexPath.row]
+		photoDetailVC.photo = photo
+		navigationController?.pushViewController(photoDetailVC, animated: true)
+	}
+}
+
 //MARK: - UICollectionViewDelegateFlowLayout
 extension PhotoVC: UICollectionViewDelegateFlowLayout {
 	

@@ -46,7 +46,6 @@
                                         <size key="customSize" width="103" height="103"/>
                                         <connections>
                                             <outlet property="imageView" destination="qgN-uN-a58" id="522-KC-f6F"/>
-                                            <segue destination="nwj-CE-I2w" kind="show" identifier="showPhotoDetail" id="8Nx-5Q-HRi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,13 +87,13 @@
         <!--Photo DetailVC-->
         <scene sceneID="BS1-iS-m5l">
             <objects>
-                <viewController id="nwj-CE-I2w" customClass="PhotoDetailVC" customModule="Lickable_Photos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoDetailVC" id="nwj-CE-I2w" customClass="PhotoDetailVC" customModule="Lickable_Photos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QUv-Ij-DTl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-9H-BBR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
