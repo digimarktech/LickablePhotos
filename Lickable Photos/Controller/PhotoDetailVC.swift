@@ -21,7 +21,7 @@ final class PhotoDetailVC: UIViewController {
 		super.viewWillAppear(animated)
 		
 		guard let photo = self.photo else { return }
-		imageView.sd_setImage(with: photo.thumbnailURL, placeholderImage: nil, options: .highPriority)
+		imageView.sd_setImage(with: photo.url, placeholderImage: nil, options: .highPriority)
 	}
 
 }
