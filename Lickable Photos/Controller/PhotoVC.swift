@@ -13,9 +13,7 @@ final class PhotoVC: UIViewController {
 	
 	//Outlets
 	@IBOutlet weak var collectionView: UICollectionView!
-	
-	//Data Properties
-	private var dataSource = PhotoVCDataSource()
+	@IBOutlet weak var dataSource: PhotoVCDataSource!
 	
 	//Layout Properties
 	private let inset: CGFloat = 10
