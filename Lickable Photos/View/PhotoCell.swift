@@ -13,12 +13,13 @@ class PhotoCell: UICollectionViewCell {
 	
 	override func awakeFromNib() {
 		self.layer.cornerRadius = 5
+		self.clipsToBounds = true
 	}
 	
 	@IBOutlet weak var imageView: UIImageView!
 	
 	func configureCell(for photo: Photo) {
 		imageView.sd_addActivityIndicator()
-		imageView.sd_setImage(with: photo.thumbnailURL, placeholderImage: nil, options: .highPriority, completed: nil)
+		imageView.sd_setImage(with: photo.thumbnailURL, placeholderImage: UIImage(named: "placeholder.png"), options: .highPriority, completed: nil)
 	}
 }

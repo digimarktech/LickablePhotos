@@ -10,8 +10,11 @@ import UIKit
 
 final class PhotoDetailVC: UIViewController {
 	
-	internal var photo: Photo?
+	//IBOutlets
 	@IBOutlet weak private var imageView: UIImageView!
+	
+	//Properties
+	internal var photo: Photo?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +24,8 @@ final class PhotoDetailVC: UIViewController {
 		super.viewWillAppear(animated)
 		
 		guard let photo = self.photo else { return }
-		imageView.sd_setImage(with: photo.url, placeholderImage: nil, options: .highPriority)
+		imageView.sd_addActivityIndicator()
+		imageView.sd_setImage(with: photo.url, placeholderImage: UIImage(named: "placeholder.png"), options: .highPriority)
 	}
 
 	@IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
