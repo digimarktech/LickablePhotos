@@ -21,6 +21,14 @@ final class PhotoVC: UIViewController {
 	private let minimumInteritemSpacing: CGFloat = 10
 	private let cellsPerRow = 3
 	
+	//UIRefreshControl
+	var refreshControl :UIRefreshControl = {
+		
+		let rc = UIRefreshControl()
+		rc.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+		return rc
+	}()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -28,15 +36,37 @@ final class PhotoVC: UIViewController {
 		collectionView.collectionViewLayout = layout
 		collectionView.delegate = self
 		collectionView.dataSource = dataSource
+		collectionView.refreshControl = refreshControl
 		
+		requestPhotos {
+			//Update the UI when data fetching has completed
+			self.updateUI()
+		}
+	}
+	
+	//MARK: Private Methods
+	private func requestPhotos(completion: @escaping () -> ()) {
 		let apiRequestLoader = APIRequestLoader(apiRequest: PhotoRequest())
 		apiRequestLoader.loadAPIRequest { [weak self] photos, error in
 			if let photos = photos {
 				guard let self = self else { return }
 				self.dataSource.photos = photos
-				DispatchQueue.main.async {
-					self.collectionView.reloadData()
-				}
+				completion()
+			}
+		}
+	}
+	
+	private func updateUI() {
+		DispatchQueue.main.async {
+			self.collectionView.reloadData()
+		}
+	}
+	
+	@objc private func refreshData() {
+		requestPhotos {
+			self.updateUI()
+			DispatchQueue.main.async {
+				self.refreshControl.endRefreshing()
 			}
 		}
 	}
