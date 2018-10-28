@@ -24,6 +24,7 @@
 		BD29984E218505D3003312EF /* APIRequestLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */; };
 		BD29985021852314003312EF /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29984F21852314003312EF /* CustomFlowLayout.swift */; };
 		BD29987C218557B0003312EF /* PhotoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29987B218557B0003312EF /* PhotoVCTests.swift */; };
+		BD29987E21856D31003312EF /* PhotoVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD29987D21856D31003312EF /* PhotoVCDataSource.swift */; };
 		D0CDB77126942D25EC239851 /* Pods_Lickable_PhotosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		BD29984D218505D3003312EF /* APIRequestLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestLoaderTests.swift; sourceTree = "<group>"; };
 		BD29984F21852314003312EF /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		BD29987B218557B0003312EF /* PhotoVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVCTests.swift; sourceTree = "<group>"; };
+		BD29987D21856D31003312EF /* PhotoVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVCDataSource.swift; sourceTree = "<group>"; };
 		C199834F2860FDC82AC33E97 /* Pods-Lickable Photos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.debug.xcconfig"; sourceTree = "<group>"; };
 		C395A3E68A5862C969CD3B61 /* Pods_Lickable_PhotosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lickable_PhotosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0671207A4A235557AEC3E36 /* Pods-Lickable Photos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lickable Photos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lickable Photos/Pods-Lickable Photos.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				BD2998252183AE7B003312EF /* Info.plist */,
 				BD2998442184BC14003312EF /* PhotoRequest.swift */,
 				BD2998482184CCA2003312EF /* APIRequestLoader.swift */,
+				BD29987D21856D31003312EF /* PhotoVCDataSource.swift */,
 			);
 			path = "Lickable Photos";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				BD29981C2183AE79003312EF /* PhotoVC.swift in Sources */,
 				BD2998452184BC14003312EF /* PhotoRequest.swift in Sources */,
 				BD2998492184CCA2003312EF /* APIRequestLoader.swift in Sources */,
+				BD29987E21856D31003312EF /* PhotoVCDataSource.swift in Sources */,
 				BD29981A2183AE79003312EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

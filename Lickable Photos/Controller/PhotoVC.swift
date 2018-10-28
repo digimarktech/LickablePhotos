@@ -15,10 +15,7 @@ final class PhotoVC: UIViewController {
 	@IBOutlet weak var collectionView: UICollectionView!
 	
 	//Data Properties
-	private var photos = [Photo]()
-	
-	//Cell Properties
-	private let photoCellReuseIdentifier = "PhotoCell"
+	private var dataSource = PhotoVCDataSource()
 	
 	//Layout Properties
 	private let inset: CGFloat = 10
@@ -32,12 +29,12 @@ final class PhotoVC: UIViewController {
 		let layout = UICollectionViewFlowLayout()
 		collectionView.collectionViewLayout = layout
 		collectionView.delegate = self
-		collectionView.dataSource = self
+		collectionView.dataSource = dataSource
 		
 		let apiRequestLoader = APIRequestLoader(apiRequest: PhotoRequest())
 		apiRequestLoader.loadAPIRequest { photos, error in
 			if let photos = photos {
-				self.photos = photos
+				self.dataSource.photos = photos
 				DispatchQueue.main.async {
 					self.collectionView.reloadData()
 				}
@@ -49,7 +46,7 @@ final class PhotoVC: UIViewController {
 		if segue.identifier == "showPhotoDetail" {
 			guard let photoDetailVC = segue.destination as? PhotoDetailVC else { return }
 			let indexPath = collectionView.indexPathsForSelectedItems?.first
-			let photo = photos[(indexPath?.row)!]
+			let photo = self.dataSource.photos[(indexPath?.row)!]
 			photoDetailVC.photo = photo
 		}
 	}
@@ -74,26 +71,6 @@ extension PhotoVC: UICollectionViewDelegateFlowLayout {
 		let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
 		let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
 		return CGSize(width: itemWidth, height: itemWidth)
-	}
-}
-
-//MARK: - UICollectionViewDataSource
-extension PhotoVC: UICollectionViewDataSource {
-	
-	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return photos.count
-	}
-	
-	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: photoCellReuseIdentifier, for: indexPath) as? PhotoCell else {
-			fatalError("Unable to dequeue cell")
-		}
-		
-		let photo = self.photos[indexPath.row]
-		cell.configureCell(for: photo)
-		
-		return cell
 	}
 }
 
