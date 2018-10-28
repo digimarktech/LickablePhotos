@@ -41,19 +41,10 @@ final class PhotoVC: UIViewController {
 		}
 	}
 	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "showPhotoDetail" {
-			guard let photoDetailVC = segue.destination as? PhotoDetailVC else { return }
-			let indexPath = collectionView.indexPathsForSelectedItems?.first
-			let photo = self.dataSource.photos[(indexPath?.row)!]
-			photoDetailVC.photo = photo
-		}
-	}
-	
+	//IBActions
 	@IBAction func topButtonPressed(_ sender: UIBarButtonItem) {
 		collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
 	}
-	
 }
 
 //MARK: UICollectionViewDelegate
