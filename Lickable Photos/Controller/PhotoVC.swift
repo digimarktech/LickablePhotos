@@ -48,6 +48,10 @@ final class PhotoVC: UIViewController {
 			photoDetailVC.photo = photo
 		}
 	}
+	
+	@IBAction func topButtonPressed(_ sender: UIBarButtonItem) {
+	}
+	
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
