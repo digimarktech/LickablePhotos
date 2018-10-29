@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import Lottie
 
 final class PhotoVC: UIViewController {
 	
@@ -22,11 +23,21 @@ final class PhotoVC: UIViewController {
 	private let cellsPerRow = 3
 	
 	//UIRefreshControl
-	var refreshControl :UIRefreshControl = {
-		
+	private(set) var refreshControl: UIRefreshControl = {
 		let rc = UIRefreshControl()
+		rc.backgroundColor = .clear
+		rc.tintColor = .clear
 		rc.addTarget(self, action: #selector(refreshData), for: .valueChanged)
 		return rc
+	}()
+	
+	//Custom refresh view to be used with refresh control
+	private(set) var customRefreshView: LOTAnimationView = {
+		let lotAnimationView = LOTAnimationView(name: "refresh")
+		lotAnimationView.contentMode = .scaleAspectFit
+		lotAnimationView.loopAnimation = true
+		lotAnimationView.translatesAutoresizingMaskIntoConstraints = false
+		return lotAnimationView
 	}()
 	
 	override func viewDidLoad() {
@@ -37,6 +48,14 @@ final class PhotoVC: UIViewController {
 		collectionView.delegate = self
 		collectionView.dataSource = dataSource
 		collectionView.refreshControl = refreshControl
+
+		refreshControl.addSubview(customRefreshView)
+		NSLayoutConstraint.activate([
+			customRefreshView.widthAnchor.constraint(equalToConstant: 250),
+			customRefreshView.heightAnchor.constraint(equalToConstant: 150),
+			customRefreshView.centerYAnchor.constraint(equalTo: refreshControl.centerYAnchor),
+			customRefreshView.centerXAnchor.constraint(equalTo: refreshControl.centerXAnchor)
+		])
 		
 		requestPhotos {
 			//Update the UI when data fetching has completed
@@ -66,6 +85,7 @@ final class PhotoVC: UIViewController {
 		requestPhotos {
 			self.updateUI()
 			DispatchQueue.main.async {
+				self.customRefreshView.stop()
 				self.refreshControl.endRefreshing()
 			}
 		}
@@ -79,6 +99,16 @@ final class PhotoVC: UIViewController {
 
 //MARK: UICollectionViewDelegate
 extension PhotoVC: UICollectionViewDelegate {
+	
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		
+		//Offset is divided by 100 so we can have decimal between 0 and 1
+		//Offset is also multiplied by -1 so we can work with positive value
+		let offset = scrollView.contentOffset.y / 100 * -1
+		if offset > 0.3 {
+			customRefreshView.play()
+		}
+	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		
