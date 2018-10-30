@@ -2,6 +2,8 @@
 
 This is a basic app that consumes photo data from the jsonplaceholder API and displays it in a collection view.
 
+![screenshot1](https://user-images.githubusercontent.com/16762986/47696399-f6850180-dbdc-11e8-9c4f-19426938724e.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
