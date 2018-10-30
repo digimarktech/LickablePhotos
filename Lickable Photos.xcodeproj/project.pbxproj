@@ -129,10 +129,8 @@
 		BD2998182183AE79003312EF /* Lickable Photos */ = {
 			isa = PBXGroup;
 			children = (
-				BD2998192183AE79003312EF /* AppDelegate.swift */,
-				BD2998202183AE7B003312EF /* Assets.xcassets */,
 				BD2998252183AE7B003312EF /* Info.plist */,
-				BD2998882186855F003312EF /* refresh.json */,
+				BD29989021888BCA003312EF /* Resources */,
 				BD2998392183B1D7003312EF /* Models */,
 				BD29983A2183B1E4003312EF /* Views */,
 				BD29983B2183B1EB003312EF /* Controllers */,
@@ -164,8 +162,6 @@
 		BD29983A2183B1E4003312EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
-				BD29981D2183AE79003312EF /* Main.storyboard */,
 				BD29983E2183E564003312EF /* PhotoCell.swift */,
 			);
 			path = Views;
@@ -196,6 +192,18 @@
 				BD2998442184BC14003312EF /* PhotoRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		BD29989021888BCA003312EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD2998192183AE79003312EF /* AppDelegate.swift */,
+				BD2998202183AE7B003312EF /* Assets.xcassets */,
+				BD2998882186855F003312EF /* refresh.json */,
+				BD2998222183AE7B003312EF /* LaunchScreen.storyboard */,
+				BD29981D2183AE79003312EF /* Main.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
