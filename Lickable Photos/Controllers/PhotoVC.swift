@@ -23,7 +23,7 @@ final class PhotoVC: UIViewController {
 	private let cellsPerRow = 3
 	
 	//UIRefreshControl
-	private(set) var refreshControl: UIRefreshControl = {
+	private(set) lazy var refreshControl: UIRefreshControl = {
 		let rc = UIRefreshControl()
 		rc.backgroundColor = .clear
 		rc.tintColor = .clear
@@ -32,7 +32,7 @@ final class PhotoVC: UIViewController {
 	}()
 	
 	//Custom refresh view to be used with refresh control
-	private(set) var customRefreshView: LOTAnimationView = {
+	private(set) lazy var customRefreshView: LOTAnimationView = {
 		let lotAnimationView = LOTAnimationView(name: "refresh")
 		lotAnimationView.contentMode = .scaleAspectFit
 		lotAnimationView.loopAnimation = true
@@ -49,6 +49,7 @@ final class PhotoVC: UIViewController {
 		collectionView.dataSource = dataSource
 		collectionView.refreshControl = refreshControl
 
+		//Setup constraints for CustomRefreshView
 		refreshControl.addSubview(customRefreshView)
 		NSLayoutConstraint.activate([
 			customRefreshView.widthAnchor.constraint(equalToConstant: 250),
@@ -113,7 +114,9 @@ extension PhotoVC: UICollectionViewDelegate {
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		
 		let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		let photoDetailVC = storyBoard.instantiateViewController(withIdentifier: "PhotoDetailVC") as! PhotoDetailVC
+		guard let photoDetailVC = storyBoard.instantiateViewController(withIdentifier: "PhotoDetailVC") as? PhotoDetailVC else {
+			fatalError("Developer Error! Could not cast as PhotoDetailVC")
+		}
 		let photo = self.dataSource.photos[indexPath.row]
 		photoDetailVC.photo = photo
 		navigationController?.pushViewController(photoDetailVC, animated: true)
