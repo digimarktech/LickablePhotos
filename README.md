@@ -4,7 +4,7 @@ This is a basic app that consumes photo data from the jsonplaceholder API and di
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ What things you need to install the software and how to install them
 * [Lottie](https://github.com/airbnb/lottie-ios) - An iOS library to natively render After Effects vector animations 
 
 
-### Installing
+### Installing Dependencies
 
 To run the project, navigate to the project directory where project is stored and install the pods associated with this project
 
@@ -35,7 +35,7 @@ Once this is complete be sure to use project file ending in xcworkspace
 
 ## Running the tests
 
-Use the following command in the terminal to execute the Unit Tests
+Use the following command in the terminal to execute the Unit Tests from within Xcode
 
 ```
 cmd + u
@@ -46,6 +46,8 @@ cmd + u
 The project has 2 major view controllers. `PhotoVC` is the first screen users land on after launching the app. This contains a collection of all of the photos download from the JSONPlacehoder endpoint.
 
 `PhotoDetailVC` is the screen that users land on after selecting one of the photos from the first screen.
+
+## Network Layer
 
 This project uses the [MVC-N](https://academy.realm.io/posts/slug-marcus-zarra-exploring-mvcn-swift/) design pattern. 
 
@@ -76,6 +78,32 @@ struct PhotoRequest: APIRequest {
 	}
 }
 ```
+
+The `MockURLProtocol` serves as a way for us to mock the response coming back from the server during our testing. This allows us to go through the motion of making an actual request but deal with the same consistent data when processing that request.
+
+## View Layer
+
+A majority of the views are built using `StoryBoards`. There is 1 custom CollectionViewCell called `PhotoCell`. It's only subview is an UIImageView that is used to display the photos coming back from the API request.
+
+## Model Layer
+
+The model consist of a Decodable Struct called `Photo`. 
+
+The JSON coming back from API request looks like this:
+
+```
+[
+  {
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+  }
+]
+```
+
+The values for the **albumId** and **id** are decoded as `Int`, the **title** as `String` and the **url** and **thumbnailUrl** as `URL`.
 
 ## Authors
 
