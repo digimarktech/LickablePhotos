@@ -1,22 +1,26 @@
 PODS:
+  - DZNEmptyDataSet (1.8.1)
   - lottie-ios (2.5.2)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - lottie-ios
   - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - DZNEmptyDataSet
     - lottie-ios
     - SDWebImage
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: b8060b134f7ba22195337791cc1289796f121bd8
+PODFILE CHECKSUM: 64fb84df20334024ab2e288b6929e773a63ec115
 
 COCOAPODS: 1.5.3

@@ -9,6 +9,7 @@ target 'Lickable Photos' do
 
 	pod 'SDWebImage', '~> 4.0'
 	pod 'lottie-ios'
+	pod 'DZNEmptyDataSet'
 
   target 'Lickable PhotosTests' do
     inherit! :search_paths
