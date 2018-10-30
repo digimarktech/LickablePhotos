@@ -31,5 +31,16 @@ class PhotoVCTests: XCTestCase {
 		
 		XCTAssertTrue(photoVC.collectionView.dataSource is PhotoVCDataSource)
 	}
+	
+	func testRefreshControlSpinnerIsClear() {
+		
+		XCTAssertTrue(photoVC.refreshControl.backgroundColor == .clear, "Refresh Control background color should be clear so that default spinner does not show up")
+		XCTAssertTrue(photoVC.refreshControl.tintColor == .clear, "Refresh Control tint color should be clear so that default spinner does not show up")
+	}
+	
+	func testCustomRefreshViewCanBeAnchoredViaAutoLayout() {
+		
+		XCTAssertFalse(photoVC.customRefreshView.translatesAutoresizingMaskIntoConstraints, "This property needs to be set to false in order to activate autolayout")
+	}
 
 }
