@@ -209,7 +209,7 @@ extension PhotoVC: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 	}
 	
 	func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-		var attributedString: NSAttributedString =  NSAttributedString(string: "Offline")
+		var attributedString: NSAttributedString
 		if isOffline {
 			attributedString = NSAttributedString(string: "Offline")
 		} else {
