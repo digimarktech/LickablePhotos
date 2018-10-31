@@ -28,6 +28,4 @@ final class PhotoDetailVC: UIViewController {
 		imageView.sd_setImage(with: photo.url, placeholderImage: UIImage(named: "placeholder.png"), options: .highPriority)
 	}
 
-	@IBAction func infoButtonPressed(_ sender: UIBarButtonItem) {
-	}
 }
