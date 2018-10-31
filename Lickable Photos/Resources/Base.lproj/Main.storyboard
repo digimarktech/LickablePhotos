@@ -106,13 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0dO-4Z-dZq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HcR-c5-0e3">
-                        <barButtonItem key="rightBarButtonItem" title="Info" id="4mC-Gf-mHr">
-                            <connections>
-                                <action selector="infoButtonPressed:" destination="nwj-CE-I2w" id="4sN-Ho-DuT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="HcR-c5-0e3"/>
                     <connections>
                         <outlet property="imageView" destination="WUg-9H-BBR" id="M29-kT-RIc"/>
                     </connections>
