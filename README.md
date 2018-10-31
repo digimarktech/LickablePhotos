@@ -20,6 +20,7 @@ What things you need to install the software and how to install them
 
 * [SDWebImage](https://github.com/SDWebImage/SDWebImage) - Asynchronous image downloader with cache support as a UIImageView category
 * [Lottie](https://github.com/airbnb/lottie-ios) - An iOS library to natively render After Effects vector animations 
+* [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet) - A drop-in UITableView/UICollectionView superclass category for showing empty datasets whenever the view has no content to display
 
 
 ### Installing Dependencies
@@ -81,7 +82,7 @@ struct PhotoRequest: APIRequest {
 }
 ```
 
-The `MockURLProtocol` serves as a way for us to mock the response coming back from the server during our testing. This allows us to go through the motion of making an actual request but deal with the same consistent data when processing that request.
+The `MockURLProtocol` serves as a way for us to mock the response coming back from the server during our testing. This allows us to go through the motion of making an actual request but work with the same consistent data when processing that request.
 
 ## View Layer
 
